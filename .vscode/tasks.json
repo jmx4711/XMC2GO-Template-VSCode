@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Firmware",
+      "type": "shell",
+      "command": "make",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean Firmware",
+      "type": "shell",
+      "command": "make clean",
+      "problemMatcher": []
+    },
+    {
+        "label": "Rebuild Firmware",
+        "type": "shell",
+        "command": "make clean && make",
+        "group": {
+        "kind": "build",
+        "isDefault": true
+        },
+        "problemMatcher": []
+    }
+  ]
+}

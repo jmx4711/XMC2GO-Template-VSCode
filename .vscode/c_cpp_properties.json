@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/inc",
+                "${workspaceFolder}/Libraries/XMCLib",
+                "${workspaceFolder}/Libraries/CMSIS/Include",
+                "${workspaceFolder}/Libraries/Newlib",
+                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM",
+                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Include"
+            ],
+            "defines": [
+                "XMC1100_Q024x0064"
+            ],
+            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

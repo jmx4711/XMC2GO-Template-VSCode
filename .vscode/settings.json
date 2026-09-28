@@ -1,0 +1,4 @@
+{
+    "makefile.configureOnOpen": true,
+    "cortex-debug.variableUseNaturalFormat": false
+}

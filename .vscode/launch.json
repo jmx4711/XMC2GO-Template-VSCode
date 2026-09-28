@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "XMC1100 Debug",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/firmware.elf",
+      "request": "launch",
+      "type": "cortex-debug",       // For Debug like in Eclipse
+      "servertype": "jlink",        // Connector type
+      "device": "XMC1100-0064",     // Device type
+      "interface": "swd",           // Interface type
+    //   "runToEntryPoint": "main",    // Entry point in software --> "main" stops
+      "svdPath": "Libraries/CMSIS/Infineon/SVD/XMC1100.svd",
+      "preLaunchTask": "Rebuild Firmware"
+    }
+  ]
+}
