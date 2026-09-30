@@ -62,6 +62,7 @@
 
 #include <stdint.h>
 #include <errno.h>
+#include <sys/stat.h>
 #include <sys/types.h>
 
 #ifdef __cplusplus
@@ -106,6 +107,41 @@ caddr_t _sbrk(int nbytes)
     errno = ENOMEM;
     return ((caddr_t)-1);
   }
+}
+
+/* File I/O is not provided by this bare-metal firmware. */
+int _close(int file)
+{
+  (void)file;
+  errno = EBADF;
+  return -1;
+}
+
+int _read(int file, void *ptr, size_t len)
+{
+  (void)file;
+  (void)ptr;
+  (void)len;
+  errno = EBADF;
+  return -1;
+}
+
+int _write(int file, const void *ptr, size_t len)
+{
+  (void)file;
+  (void)ptr;
+  (void)len;
+  errno = EBADF;
+  return -1;
+}
+
+off_t _lseek(int file, off_t offset, int whence)
+{
+  (void)file;
+  (void)offset;
+  (void)whence;
+  errno = ESPIPE;
+  return (off_t)-1;
 }
 
 /* Init */

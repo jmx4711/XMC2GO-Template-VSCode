@@ -17,7 +17,7 @@ STARTUP  = $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAI
 LINKER   = $(wildcard linker/XMC1100x0064.ld)
 
 # ---- Compiler-Flags ----
-CFLAGS  = -mcpu=cortex-m0 -mthumb -Wall -Os -g
+CFLAGS  = -mcpu=cortex-m0 -mthumb -Wall -O0 -g3
 CFLAGS += -Iinc
 CFLAGS += -ILibraries/XMCLib/inc
 CFLAGS += -ILibraries/CMSIS/Include
