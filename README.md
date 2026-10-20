@@ -13,6 +13,8 @@ git clone https://github.com/jmx4711/XMC2GO-Template-VSCode
 5) Remove .gitignore in folder to remove connection to repository.
 
 
-// Test JLink Connection:
+6) Install Segger JLink
+brew install segger-jlink
 
+Test JLink Connection:
 JLinkExe -device XMC1100-0064 -if SWD -speed 4000 -autoconnect 1
