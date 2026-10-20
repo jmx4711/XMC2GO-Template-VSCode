@@ -11,7 +11,7 @@
 `git clone https://github.com/jmx4711/XMC2GO-Template-VSCode`
 
 5) Remove .gitignore in folder to remove connection to repository.
-`rm -f ".gitignore"`
+`rm -f ".gitignore" ".git"`
 
 6) Install Segger JLink
 `brew install segger-jlink`
