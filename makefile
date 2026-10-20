@@ -10,7 +10,8 @@ TARGET = firmware
 SRC      = $(wildcard src/*.c) \
            $(wildcard Libraries/XMCLib/src/*.c) \
 		   $(wildcard Libraries/Newlib/*.c) \
-           $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/system_XMC1100.c)
+           $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/system_XMC1100.c) \
+		   $(wildcard Libraries/Myown/src/*.c)
 
 STARTUP  = $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM/startup_XMC1100.S)
 
@@ -25,6 +26,7 @@ CFLAGS += -ILibraries/Newlib
 CFLAGS += -ILibraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM
 CFLAGS += -ILibraries/CMSIS/Infineon/COMPONENT_XMC1100/Include
 CFLAGS += -DXMC1100_Q024x0064
+CFLAGS += -ILibraries/Myown/inc
 
 # ---- Linker-Flags ----
 LDFLAGS = -mcpu=cortex-m0 -mthumb -T$(LINKER) -nostartfiles -Wl,--gc-sections

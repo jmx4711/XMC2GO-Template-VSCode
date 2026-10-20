@@ -8,7 +8,8 @@
                 "${workspaceFolder}/Libraries/CMSIS/Include",
                 "${workspaceFolder}/Libraries/Newlib",
                 "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM",
-                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Include"
+                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Include",
+                "${workspaceFolder}/Libraries/Myown/inc"
             ],
             "defines": [
                 "XMC1100_Q024x0064"
