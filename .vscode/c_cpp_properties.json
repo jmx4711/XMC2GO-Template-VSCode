@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Mac",
+            "name": "ARM GCC",
             "includePath": [
                 "${workspaceFolder}/inc",
                 "${workspaceFolder}/Libraries/XMCLib",
@@ -14,7 +14,7 @@
             "defines": [
                 "XMC1100_Q024x0064"
             ],
-            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
+            "compilerPath": "arm-none-eabi-gcc",
             "cStandard": "c17",
             "cppStandard": "c++14",
             "intelliSenseMode": "gcc-arm"
