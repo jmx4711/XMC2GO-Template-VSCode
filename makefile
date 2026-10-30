@@ -8,25 +8,25 @@ TARGET = firmware
 # ---- Automatisch alle relevanten Dateien finden ----
 # ---- Automatisch alle relevanten Dateien finden ----
 SRC      = $(wildcard src/*.c) \
-           $(wildcard Libraries/XMCLib/src/*.c) \
-		   $(wildcard Libraries/Newlib/*.c) \
-           $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/system_XMC1100.c) \
-		   $(wildcard Libraries/Myown/src/*.c)
+           $(wildcard Libraries/CMSIS/src/*.c) \
+		   $(wildcard Libraries/Myown/src/*.c) \
+           $(wildcard Libraries/Newlib/src/*.c) \
+		   $(wildcard Libraries/XMCLib/src/*.c)
 
-STARTUP  = $(wildcard Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM/startup_XMC1100.S)
+STARTUP  = $(wildcard startup/startup_XMC1100.S)
 
 LINKER   = $(wildcard linker/XMC1100x0064.ld)
 
 # ---- Compiler-Flags ----
 CFLAGS  = -mcpu=cortex-m0 -mthumb -Wall -O0 -g3
 CFLAGS += -Iinc
-CFLAGS += -ILibraries/XMCLib/inc
-CFLAGS += -ILibraries/CMSIS/Include
-CFLAGS += -ILibraries/Newlib
-CFLAGS += -ILibraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM
-CFLAGS += -ILibraries/CMSIS/Infineon/COMPONENT_XMC1100/Include
 CFLAGS += -DXMC1100_Q024x0064
+
+# Libraries
+CFLAGS += -ILibraries/CMSIS/inc
 CFLAGS += -ILibraries/Myown/inc
+CFLAGS += -ILibraries/Newlib/inc
+CFLAGS += -ILibraries/XMCLib/inc
 
 # ---- Linker-Flags ----
 LDFLAGS = -mcpu=cortex-m0 -mthumb -T$(LINKER) -nostartfiles -Wl,--gc-sections
