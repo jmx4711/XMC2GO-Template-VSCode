@@ -4,12 +4,10 @@
             "name": "ARM GCC",
             "includePath": [
                 "${workspaceFolder}/inc",
-                "${workspaceFolder}/Libraries/XMCLib/inc",
-                "${workspaceFolder}/Libraries/CMSIS/Include",
-                "${workspaceFolder}/Libraries/Newlib",
-                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM",
-                "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Include",
-                "${workspaceFolder}/Libraries/Myown/inc"
+                "${workspaceFolder}/Libraries/CMSIS/inc",
+                "${workspaceFolder}/Libraries/Myown/inc",
+                // "${workspaceFolder}/Libraries/Newlib/inc",
+                "${workspaceFolder}/Libraries/XMCLib/inc"
             ],
             "defines": [
                 "XMC1100_Q024x0064"
