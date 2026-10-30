@@ -4,7 +4,7 @@
             "name": "ARM GCC",
             "includePath": [
                 "${workspaceFolder}/inc",
-                "${workspaceFolder}/Libraries/XMCLib",
+                "${workspaceFolder}/Libraries/XMCLib/inc",
                 "${workspaceFolder}/Libraries/CMSIS/Include",
                 "${workspaceFolder}/Libraries/Newlib",
                 "${workspaceFolder}/Libraries/CMSIS/Infineon/COMPONENT_XMC1100/Source/TOOLCHAIN_GCC_ARM",
