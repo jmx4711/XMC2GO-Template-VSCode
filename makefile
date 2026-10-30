@@ -34,6 +34,8 @@ LDFLAGS = -mcpu=cortex-m0 -mthumb -T$(LINKER) -nostartfiles -Wl,--gc-sections
 # ---- Build-Regeln ----
 all: $(TARGET).elf $(TARGET).bin
 
+rebuild: clean all
+
 $(TARGET).elf: $(SRC) $(STARTUP)
 	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
 
@@ -41,4 +43,9 @@ $(TARGET).bin: $(TARGET).elf
 	$(OBJCOPY) -O binary $< $@
 
 clean:
+ifeq ($(OS),Windows_NT)
+	if exist $(TARGET).elf del /Q $(TARGET).elf
+	if exist $(TARGET).bin del /Q $(TARGET).bin
+else
 	rm -f $(TARGET).elf $(TARGET).bin
+endif

@@ -20,7 +20,7 @@
     {
         "label": "Rebuild Firmware",
         "type": "shell",
-        "command": "make clean && make",
+      "command": "make rebuild",
         "group": {
         "kind": "build",
         "isDefault": true
