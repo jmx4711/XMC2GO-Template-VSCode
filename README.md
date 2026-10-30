@@ -1,5 +1,7 @@
 # XMC2GO-Template-VSCode
 
+Installation guide for MacOS
+
 1) Install VSCode
 
 2) Install VSCode extensions: Intellisense for C/C++, Cortex-Debugger
