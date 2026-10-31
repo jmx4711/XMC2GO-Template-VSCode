@@ -1,6 +1,6 @@
 # XMC2GO-Template-VSCode
 
-Installation guide
+Installation guide (for build system with CMake and Ninja for build speed optimization)
 
 1) Install VSCode
 
