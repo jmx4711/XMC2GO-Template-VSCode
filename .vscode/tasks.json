@@ -12,7 +12,7 @@
         "build",
         "-G",
         "Ninja",
-        "-DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi-gcc.cmake"
+        "-DCMAKE_TOOLCHAIN_FILE='cmake/arm-none-eabi-gcc.cmake'"
       ],
       "problemMatcher": [
         "$gcc"
