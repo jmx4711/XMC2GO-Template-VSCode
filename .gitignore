@@ -6,3 +6,4 @@
 # Compiled binaries
 *.bin
 *.elf
+build/

@@ -2,30 +2,39 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Configure Firmware",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "-S",
+        ".",
+        "-B",
+        "build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_TOOLCHAIN_FILE='cmake/arm-none-eabi-gcc.cmake'"
+      ],
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
       "label": "Build Firmware",
       "type": "shell",
-      "command": "make",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
+      "command": "ninja -C build",
+      "dependsOn": "Configure Firmware",
+      "dependsOrder": "sequence",
+      "problemMatcher": [
+        "$gcc"
+      ]
     },
     {
-      "label": "Clean Firmware",
+      "label": "Remove Build Directory",
       "type": "shell",
-      "command": "make clean",
-      "problemMatcher": []
-    },
-    {
-        "label": "Rebuild Firmware",
-        "type": "shell",
-      "command": "make rebuild",
-        "group": {
-        "kind": "build",
-        "isDefault": true
-        },
-        "problemMatcher": []
+      "command": "cmake -E remove_directory build",
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
