@@ -30,6 +30,7 @@ Installation guide
     `del ".gitignore" ".git"`
 
 6) Install Segger JLink
+    
     Mac:
     `brew install segger-jlink`
 
@@ -37,6 +38,7 @@ Installation guide
     via website: https://www.segger.com/downloads/jlink/
 
 7) Test JLink Connection:
+    
     `JLinkExe -device XMC1100-0064 -if SWD -speed 4000 -autoconnect 1`
 
     or using J-Link Commander
