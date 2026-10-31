@@ -1,6 +1,7 @@
-# XMC2GO-Template-VSCode
+# Installation guide for programming XMC1100s with VSCode (build system: CMake and Ninja)
 
-Installation guide
+CMake and Ninja have been chosen for build speed and for being industry standard.
+If you want to use make instead (like DAVE IDE does it) please refer to the "Build-system_make" branch instead; though it will not be maintained.
 
 1) Install VSCode
 
