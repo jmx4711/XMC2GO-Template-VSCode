@@ -19,7 +19,6 @@ LINKER   = $(wildcard linker/XMC1100x0064.ld)
 
 # ---- Compiler-Flags ----
 CFLAGS  = -mcpu=cortex-m0 -mthumb -Wall -O0 -g3
-CFLAGS += -Iinc
 CFLAGS += -DXMC1100_Q024x0064
 
 # Libraries
