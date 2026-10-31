@@ -2,14 +2,15 @@
   "version": "2.0.0",
   "tasks": [
     {
-    "label": "Configure Firmware",
-    "type": "shell",
-    "command": "cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi-gcc.cmake"
+      "label": "Configure Firmware",
+      "type": "shell",
+      "command": "cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE='cmake/arm-none-eabi-gcc.cmake'",
+      "problemMatcher": []
     },
     {
-    "label": "Build Firmware",
-    "type": "shell",
-    "command": "ninja -C build"
+      "label": "Build Firmware",
+      "type": "shell",
+      "command": "ninja -C build"
     }
   ]
 }
