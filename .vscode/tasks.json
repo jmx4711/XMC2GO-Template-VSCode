@@ -5,11 +5,17 @@
       "label": "Configure Firmware",
       "type": "shell",
       "command": "cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE='cmake/arm-none-eabi-gcc.cmake'",
+      "problemMatcher": [
+        "$gcc"
+      ]
     },
     {
       "label": "Build Firmware",
       "type": "shell",
-      "command": "ninja -C build"
+      "command": "ninja -C build",
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
