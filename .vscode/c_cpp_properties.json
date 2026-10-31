@@ -3,7 +3,6 @@
         {
             "name": "ARM GCC",
             "includePath": [
-                "${workspaceFolder}/inc",
                 "${workspaceFolder}/Libraries/CMSIS/inc",
                 "${workspaceFolder}/Libraries/Myown/inc",
                 // "${workspaceFolder}/Libraries/Newlib/inc",

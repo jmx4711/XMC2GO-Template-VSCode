@@ -42,7 +42,6 @@ add_executable(${TARGET} ${SOURCES})
 
 # Include directories for the target
 target_include_directories(${TARGET} PRIVATE
-    ${CMAKE_SOURCE_DIR}/inc
     ${CMAKE_SOURCE_DIR}/Libraries/CMSIS/inc
     ${CMAKE_SOURCE_DIR}/Libraries/Myown/inc
     # ${CMAKE_SOURCE_DIR}/Libraries/Newlib/inc

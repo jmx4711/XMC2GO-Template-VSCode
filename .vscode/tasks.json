@@ -4,7 +4,16 @@
     {
       "label": "Configure Firmware",
       "type": "shell",
-      "command": "cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE='cmake/arm-none-eabi-gcc.cmake'",
+      "command": "cmake",
+      "args": [
+        "-S",
+        ".",
+        "-B",
+        "build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi-gcc.cmake"
+      ],
       "problemMatcher": [
         "$gcc"
       ]
@@ -13,6 +22,16 @@
       "label": "Build Firmware",
       "type": "shell",
       "command": "ninja -C build",
+      "dependsOn": "Configure Firmware",
+      "dependsOrder": "sequence",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Remove Build Directory",
+      "type": "shell",
+      "command": "cmake -E remove_directory build",
       "problemMatcher": [
         "$gcc"
       ]
