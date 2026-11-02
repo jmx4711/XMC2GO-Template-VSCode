@@ -10,6 +10,7 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
 3) Install terminal tools 
 
     MacOS:
+    Homebrew needs to be installed, please refer too https://brew.sh/ and https://docs.brew.sh/Installation
     `brew install gcc-arm-embedded`
     `brew install cmake`
     `brew install ninja`
@@ -19,10 +20,10 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
     `winget install cmake`
     `winget install Ninja-build.Ninja`
 
-4) Import Template into own folder using git:
+5) Import Template into own folder using git:
     `git clone https://github.com/jmx4711/XMC2GO-Template-VSCode`
 
-5) Remove .gitignore in folder to remove connection to repository.
+6) Remove .gitignore in folder to remove connection to repository.
 
     MacOS:
     `rm -f ".gitignore" ".git"`
@@ -30,7 +31,7 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
     Windows:
     `del ".gitignore" ".git"`
 
-6) Install Segger JLink
+7) Install Segger JLink
     
     Mac:
     `brew install segger-jlink`
@@ -38,10 +39,10 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
     All:
     via website: https://www.segger.com/downloads/jlink/
 
-7) Test JLink Connection:
+8) Test JLink Connection:
     
     `JLinkExe -device XMC1100-0064 -if SWD -speed 4000 -autoconnect 1`
 
     or using J-Link Commander
 
-8) Have fun with it :D
+9) Have fun with it :D
