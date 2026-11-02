@@ -11,14 +11,16 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
 
     MacOS:
     Homebrew needs to be installed, please refer too https://brew.sh/ and https://docs.brew.sh/Installation
-    `brew install gcc-arm-embedded`
-    `brew install cmake`
-    `brew install ninja`
+
+   `brew install gcc-arm-embedded`
+   `brew install cmake`
+   `brew install ninja`
 
     Windows:
-    `winget install gcc-arm-none-eabi`
-    `winget install cmake`
-    `winget install Ninja-build.Ninja`
+   
+   `winget install gcc-arm-none-eabi`
+   `winget install cmake`
+   `winget install Ninja-build.Ninja`
 
 5) Import Template into own folder using git:
     `git clone https://github.com/jmx4711/XMC2GO-Template-VSCode`
