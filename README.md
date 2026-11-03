@@ -48,3 +48,6 @@ If you want to use make instead (like DAVE IDE does it) please refer to the "Bui
     or using J-Link Commander
 
 9) Have fun with it :D
+    Works only as simple main project substitution (DAVE Apps are not included)
+
+10) Functions: all depend on cortex debugger --> registers: XPeripherals-View & variables also under watch and variables
